@@ -1,24 +1,24 @@
 import jimp from "jimp";
 
 function number() {
-    let num = Math.round(Math.random() * 4) + 1;
+    let num = Math.round(Math.random() * 5) + 1;
     return num;
   }
   
   function bgImg() {
-      return `./images/colours/Colour (${number()}).png`;
+      return `./public/images/colours/Colour (${number()}).png`;
   }
   
   function faceImg() {
-      return `./images/faces/Face (${number()}).png`;
+      return `./public/images/faces/Face (${number()}).png`;
   }
   
   function eyeImg() {
-      return `./images/eyes/Eye (${number()}).png`;
+      return `./public/images/eyes/Eye (${number()}).png`;
   }
   
   function smileImg() {
-      return `./images/smiles/Smile (${number()}).png`;
+      return `./public/images/smiles/Smile (${number()}).png`;
   }
   
   async function overlay() {
@@ -31,7 +31,7 @@ function number() {
       bg.composite(face, 0, 0)
       bg.composite(eye, 0, 0)
       bg.composite(smile, 0, 0)
-      await bg.writeAsync("public/images/image.png");
+      await bg.writeAsync("public/images/savedImage/image.png");
   }
   
   export default overlay;

@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   overlay();
   setTimeout(() => {
     res.render("index");
-  }, 250);
+  }, 100);
 });
 
 app.listen(port, () => {
